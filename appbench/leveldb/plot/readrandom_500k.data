@@ -1,0 +1,3 @@
+# value ext4dax splitfs devfs macrofs macrofs_slowdown
+512  5.236 5.110 7.801 4.779 5.427
+4096  14.094 10.052 17.900 10.756 12.264
