@@ -105,12 +105,12 @@ sudo vim /etc/fstab
 #### Get FusionFS source code on Github
 ```
 cd ~/ssd
-git clone https://github.com/RutgersCSSystems/FusionFS-final
+git clone https://github.com/RutgersCSSystems/FusionFS
 ```
 
 #### Install required libraries for FusionFS
 ```
-cd FusionFS-final 
+cd FusionFS 
 ./cloudlab.sh
 ```
 NOTE: If you are prompted during Ubuntu package installation, please hit enter and all the package installation to complete.
@@ -157,7 +157,7 @@ After the reboot, the reserved region of memory would disappear from the OS.
 
 #### Build and install user-space library (LibFS) and required libraries:
 ```
-cd ssd/FusionFS-final
+cd ssd/FusionFS
 source scripts/setvars.sh
 cd $LIBFS
 source scripts/setvars.sh
