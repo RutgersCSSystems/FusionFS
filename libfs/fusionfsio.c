@@ -367,6 +367,7 @@ static uinode *get_inode(const char *fname, ufile *fp) {
         if (!target) {
                 target = (uinode *)malloc(sizeof(uinode));
                 memset(target, 0, sizeof(uinode));
+                strcpy(target->fname, fname);
                 uinode_table_insert(target);
         }
 
@@ -377,7 +378,6 @@ static uinode *get_inode(const char *fname, ufile *fp) {
                         pthread_spin_init(&target->sq_tree_lock, 0);
                 }
 #endif
-                if (target->ref == 0) strcpy(target->fname, fname);
 
                 fp->inode = target;
                 fp->inode_idx = target->ref;
